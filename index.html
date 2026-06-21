@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentibooks – Tax‑Ready Accounting for Kenyan Businesses</title>
+    <meta name="description" content="Sentibooks is the modern bookkeeping platform for Kenyan SMEs. Invoicing, expenses, VAT, PAYE, and KRA compliance made effortless.">
+    <link rel="icon" type="image/png" href="assets/images/logo/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+        .bg-blue-gradient { background: linear-gradient(135deg, #0B2A6A 0%, #0C4697 100%); }
+        .bg-green-gradient { background: linear-gradient(135deg, #00B057 0%, #009a4c 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1); }
+        .glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        .hero-animation { background-size: 200% 200%; animation: gradientMove 6s ease infinite; }
+        @keyframes gradientMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        .fade-in { animation: fadeIn 1s ease forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        .phone-frame {
+            background: #0B2A6A;
+            border-radius: 36px;
+            padding: 12px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+            max-width: 280px;
+            margin: 0 auto;
+        }
+        .phone-screen {
+            border-radius: 28px;
+            overflow: hidden;
+            background: #fff;
+            position: relative;
+        }
+        .phone-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 24px;
+            background: #0B2A6A;
+            border-radius: 0 0 14px 14px;
+            z-index: 10;
+        }
+
+        .monitor-frame {
+            background: #1a1a1a;
+            border-radius: 12px 12px 4px 4px;
+            padding: 10px;
+            box-shadow: 0 20px 40px -12px rgba(0,0,0,0.3);
+            max-width: 750px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .monitor-screen {
+            border-radius: 4px;
+            overflow: hidden;
+            background: #fff;
+        }
+        .monitor-stand {
+            background: #1a1a1a;
+            height: 6px;
+            width: 50%;
+            margin: 6px auto 0;
+            border-radius: 0 0 4px 4px;
+        }
+        .monitor-base {
+            background: #1a1a1a;
+            height: 4px;
+            width: 70%;
+            margin: 4px auto 0;
+            border-radius: 2px;
+        }
+
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slider-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.4);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .dot.active {
+            background: #ffffff;
+        }
+
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+    <!-- Navbar (glass effect) -->
+    <nav class="sticky top-0 z-50 nav-glass shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <div class="flex items-center gap-3">
+                <img src="assets/images/logo/logo.png" alt="Sentibooks logo" class="h-10 w-10 rounded-xl shadow-lg">
+                <span class="text-2xl font-extrabold text-[#0B2A6A] tracking-tight">Sentibooks</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
+                <a href="#features" class="hover:text-[#0B2A6A] transition">Features</a>
+                <a href="#tax-ready" class="hover:text-[#0B2A6A] transition">Tax Ready</a>
+                <a href="#pricing" class="hover:text-[#0B2A6A] transition">Pricing</a>
+                <a href="#" class="text-[#0B2A6A] font-semibold">Sign In</a>
+                <a href="#" class="bg-green-gradient text-white px-6 py-2.5 rounded-lg hover:shadow-lg transition-all shadow-md">Free Trial</a>
+            </div>
+            <div class="md:hidden flex items-center gap-4">
+                <a href="#" class="text-[#0B2A6A] font-semibold text-sm">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-blue-gradient hero-animation text-white overflow-hidden py-24 md:py-32">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8 fade-in">
+                    <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-sm font-medium">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00B057] opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-[#00B057]"></span>
+                        </span>
+                        Now supporting KRA iTax filing
+                    </span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                        Bookkeeping <span class="text-[#00B057]">built for</span><br>Kenyan businesses
+                    </h1>
+                    <p class="text-lg md:text-xl text-blue-100/90 max-w-lg">
+                        Invoices, expenses, VAT, PAYE — all in one place. Automate your accounting and stay tax‑ready with real‑time KRA compliance.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" onclick="openModal()" class="bg-green-gradient text-white px-8 py-4 rounded-lg font-semibold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
+                            Start free trial
+                        </a>
+                        <a href="#" onclick="openModal()" class="glass text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition">
+                            Book a demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Slider -->
+                <div class="hidden lg:block fade-in" style="animation-delay: 0.2s;">
+                    <div class="slider-container">
+                        <div class="slider-track" id="sliderTrack">
+                            <div class="slider-slide">
+                                <div class="phone-frame">
+                                    <div class="phone-screen">
+                                        <div class="phone-notch"></div>
+                                        <img src="assets/images/01.jpg" alt="Sentibooks mobile view" class="w-full h-auto">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-slide">
+                                <div class="monitor-frame">
+                                    <div class="monitor-screen">
+                                        <img src="assets/images/02.jpg" alt="Sentibooks desktop view" class="w-full h-auto">
+                                    </div>
+                                    <div class="monitor-stand"></div>
+                                    <div class="monitor-base"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-dots">
+                            <span class="dot active" data-index="0"></span>
+                            <span class="dot" data-index="1"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-[#0B2A6A]">Everything you need to run your business</h2>
+                <p class="mt-4 text-lg text-gray-600">From invoicing to tax filing, Sentibooks covers the full accounting cycle — designed specifically for Kenya.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Invoicing & Receipts -->
+                <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
+                    <div class="h-12 w-12 bg-[#0B2A6A]/10 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-[#0B2A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Invoicing & Receipts</h3>
+                    <p class="text-gray-600">Create KRA‑compliant invoices, track payments, and automate reminders. Send via email or WhatsApp.</p>
+                </div>
+                <!-- Expense Tracking -->
+                <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
+                    <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-[#00B057]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Expense Tracking</h3>
+                    <p class="text-gray-600">Capture expenses via M‑Pesa, bank feeds, or manual entry. Categorise for accurate tax deductions.</p>
+                </div>
+                <!-- Bank & M‑Pesa Reconciliation -->
+                <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
+                    <div class="h-12 w-12 bg-blue-100 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-[#0B2A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M3 10v11h18V10" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Bank & M‑Pesa Reconciliation</h3>
+                    <p class="text-gray-600">Auto‑match transactions from bank statements and M‑Pesa with your books. Reconcile in seconds.</p>
+                </div>
+                <!-- Payroll & Statutory -->
+                <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
+                    <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-[#00B057]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Payroll & Statutory</h3>
+                    <p class="text-gray-600">Run payroll, auto‑calculate PAYE, NHIF, NSSF, NITA. Generate payslips and iTax schedules.</p>
+                </div>
+                <!-- Financial Reports -->
+                <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
+                    <div class="h-12 w-12 bg-blue-100 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-[#0B2A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Financial Reports</h3>
+                    <p class="text-gray-600">Profit & Loss, Balance Sheet, Cash Flow — always up‑to‑date. Download PDF for your accountant or KRA.</p>
+                </div>
+                <!-- Multi‑user Access -->
+                <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
+                    <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-[#00B057]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Multi‑user Access</h3>
+                    <p class="text-gray-600">Invite your accountant, team members, or auditor with controlled permissions. All changes are logged.</p>
+                </div>
+
+                <!-- Multi‑Branch Support -->
+                <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
+                    <div class="h-12 w-12 bg-blue-100 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-[#0B2A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Multi‑Branch Support</h3>
+                    <p class="text-gray-600">Manage inventory, sales, and expenses across multiple shop locations or branches from a single dashboard.</p>
+                </div>
+
+                <!-- Multiple Business Management -->
+                <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
+                    <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-[#00B057]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Multiple Business Management</h3>
+                    <p class="text-gray-600">Run several businesses under one account. Switch between companies instantly, with separate books for each.</p>
+                </div>
+
+                <!-- Supplier Invoices & LPOs -->
+                <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
+                    <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-[#00B057]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Supplier Invoices & LPOs</h3>
+                    <p class="text-gray-600">Record supplier bills, create Purchase Orders, and manage LPOs. Track payables and never miss a payment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tax Ready Section -->
+    <section id="tax-ready" class="bg-blue-gradient py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
+            <span class="bg-white/10 backdrop-blur-md text-sm font-medium px-4 py-2 rounded-full inline-block mb-6">🇰🇪 KRA Compliant</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Your tax partner, not just software</h2>
+            <p class="text-lg text-blue-100/90 max-w-2xl mx-auto mb-12">
+                Sentibooks automatically maps your transactions to iTax categories, generates VAT returns, and prepares PAYE schedules — so you're always ready for filing.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 text-left max-w-4xl mx-auto">
+                <div class="glass rounded-2xl p-6 card-hover">
+                    <div class="text-4xl mb-4">📄</div>
+                    <h3 class="font-semibold text-xl mb-2">VAT Returns (Form VAT3)</h3>
+                    <p class="text-sm text-blue-200">Auto‑compute output/input VAT, export CSV for iTax upload, or submit directly via API (coming soon).</p>
+                </div>
+                <div class="glass rounded-2xl p-6 card-hover">
+                    <div class="text-4xl mb-4">🧾</div>
+                    <h3 class="font-semibold text-xl mb-2">PAYE & Statutory</h3>
+                    <p class="text-sm text-blue-200">Generate P9A forms, NHIF/NSSF schedules, and monthly employer returns in one click.</p>
+                </div>
+                <div class="glass rounded-2xl p-6 card-hover">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="font-semibold text-xl mb-2">Audit‑Ready Reports</h3>
+                    <p class="text-sm text-blue-200">Trial balance, general ledger, and transaction histories that make KRA audits painless.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section with Toggle -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-[#0B2A6A]">Simple, transparent pricing</h2>
+                <p class="mt-4 text-lg text-gray-600">Plans designed for every stage of your business. No hidden fees.</p>
+            </div>
+            <div class="flex justify-center items-center gap-4 mb-12">
+                <span class="text-sm font-medium text-gray-600">Monthly</span>
+                <label for="billing-toggle" class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="billing-toggle" class="sr-only peer" onchange="toggleBilling()">
+                    <div class="w-11 h-6 bg-gray-300 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-100 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#00B057]"></div>
+                </label>
+                <span class="text-sm font-medium text-gray-900">Annual <span class="text-[#00B057] font-bold">(Save 15%)</span></span>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Starter -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 card-hover flex flex-col">
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Starter</h3>
+                    <p class="text-gray-500 text-sm mb-4">For sole traders & freelancers</p>
+                    <div class="text-4xl font-extrabold text-[#0B2A6A] mb-6">
+                        Ksh <span class="price-value" data-monthly="600" data-annual="6120">600</span><span class="text-lg font-medium text-gray-400 period-text">/mo</span>
+                    </div>
+                    <p class="text-sm text-green-600 font-medium annual-note hidden">Equivalent to <span class="monthly-equivalent">510</span>/mo</p>
+                    <ul class="space-y-3 text-sm text-gray-600 mb-8 flex-1 mt-2">
+                        <li class="flex items-start gap-2"><span class="text-[#00B057]">✓</span> Unlimited invoicing</li>
+                        <li class="flex items-start gap-2"><span class="text-[#00B057]">✓</span> Expense tracking</li>
+                        <li class="flex items-start gap-2"><span class="text-[#00B057]">✓</span> Basic reports</li>
+                        <li class="flex items-start gap-2"><span class="text-[#00B057]">✓</span> Single user</li>
+                        <li class="flex items-start gap-2 text-gray-400"><span>✕</span> Bank & M‑Pesa feeds</li>
+                        <li class="flex items-start gap-2 text-gray-400"><span>✕</span> Payroll & statutory</li>
+                    </ul>
+                    <a href="#" onclick="openModal()" class="block w-full bg-[#0B2A6A] text-white text-center py-3 rounded-lg font-semibold hover:bg-[#0C4697] transition">Start trial</a>
+                </div>
+                <!-- Business -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border-2 border-[#00B057] relative card-hover flex flex-col transform scale-105 z-10">
+                    <span class="absolute -top-3 right-4 bg-green-gradient text-white text-xs font-bold px-3 py-1 rounded-full">POPULAR</span>
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Business</h3>
+                    <p class="text-gray-500 text-sm mb-4">For growing SMEs</p>
+                    <div class="text-4xl font-extrabold text-[#00B057] mb-6">
+                        Ksh <span class="price-value" data-monthly="2000" data-annual="20400">2,000</span><span class="text-lg font-medium text-gray-400 period-text">/mo</span>
+                    </div>
+                    <p class="text-sm text-green-600 font-medium annual-note hidden">Equivalent to <span class="monthly-equivalent">1,700</span>/mo</p>
+                    <ul class="space-y-3 text-sm text-gray-600 mb-8 flex-1 mt-2">
+                        <li class="flex items-start gap-2"><span class="text-[#00B057]">✓</span> Everything in Starter</li>
+                        <li class="flex items-start gap-2"><span class="text-[#00B057]">✓</span> Bank & M‑Pesa reconciliation</li>
+                        <li class="flex items-start gap-2"><span class="text-[#00B057]">✓</span> Payroll & statutory (PAYE, NHIF, NSSF)</li>
+                        <li class="flex items-start gap-2"><span class="text-[#00B057]">✓</span> Multi‑user access</li>
+                        <li class="flex items-start gap-2"><span class="text-[#00B057]">✓</span> Priority support</li>
+                    </ul>
+                    <a href="#" onclick="openModal()" class="block w-full bg-green-gradient text-white text-center py-3 rounded-lg font-semibold hover:shadow-lg transition">Start trial</a>
+                </div>
+                <!-- Enterprise -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 card-hover flex flex-col">
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Enterprise</h3>
+                    <p class="text-gray-500 text-sm mb-4">For larger teams</p>
+                    <div class="text-4xl font-extrabold text-[#0B2A6A] mb-6">Custom</div>
+                    <ul class="space-y-3 text-sm text-gray-600 mb-8 flex-1">
+                        <li class="flex items-start gap-2"><span class="text-[#00B057]">✓</span> Everything in Business</li>
+                        <li class="flex items-start gap-2"><span class="text-[#00B057]">✓</span> Dedicated account manager</li>
+                        <li class="flex items-start gap-2"><span class="text-[#00B057]">✓</span> Custom integrations</li>
+                        <li class="flex items-start gap-2"><span class="text-[#00B057]">✓</span> Advanced permissions</li>
+                        <li class="flex items-start gap-2"><span class="text-[#00B057]">✓</span> SLA & onboarding</li>
+                    </ul>
+                    <a href="#" onclick="openModal()" class="block w-full bg-white border-2 border-[#0B2A6A] text-[#0B2A6A] text-center py-3 rounded-lg font-semibold hover:bg-[#0B2A6A] hover:text-white transition">Contact us</a>
+                </div>
+            </div>
+            <p class="text-center text-sm text-gray-500 mt-8">All prices exclude VAT.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-blue-gradient rounded-3xl p-12 md:p-16 shadow-2xl card-hover">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Ready to simplify your accounting?</h2>
+                <p class="text-blue-100/90 text-lg mb-8 max-w-xl mx-auto">Join hundreds of Kenyan businesses that trust Sentibooks for daily bookkeeping and tax compliance.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#" onclick="openModal()" class="bg-green-gradient text-white px-8 py-4 rounded-lg font-semibold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
+                        Get started free
+                    </a>
+                    <a href="#" onclick="openModal()" class="glass text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition">
+                        Book a demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-gradient text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="assets/images/logo/icon.png" alt="Sentibooks logo" class="h-8 w-8 rounded">
+                        <span class="text-lg font-bold text-white">Sentibooks</span>
+                    </div>
+                    <p class="text-sm text-blue-100">Smart bookkeeping & accounting for Kenyan businesses.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm text-blue-100">
+                        <li><a href="#features" class="hover:text-white transition">Features</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition">Integrations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-blue-100">
+                        <li><a href="#" class="hover:text-white transition">About</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm text-blue-100">
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-sm text-blue-200">
+                <p>&copy; <span id="year"></span> Sentibooks. All rights reserved. Built for 🇰🇪 Kenya.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Wait List Modal (logo icon added) -->
+    <div id="waitlistModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <div class="text-center mb-6">
+                <!-- Logo instead of "S" -->
+                <img src="assets/images/logo/logo.png" alt="Sentibooks logo" class="h-12 w-12 rounded-xl shadow-lg mx-auto mb-4">
+                <h3 class="text-2xl font-bold text-gray-900">Join the wait list</h3>
+                <p class="text-sm text-gray-500 mt-2">Be the first to know when Sentibooks launches. No spam, ever.</p>
+            </div>
+            <form id="waitlistForm" class="space-y-4">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+                    <input type="email" id="email" name="email" required placeholder="you@example.com"
+                           class="mt-1 block w-full px-3 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0B2A6A] focus:border-[#0B2A6A] sm:text-sm">
+                </div>
+                <button type="submit" class="w-full bg-green-gradient text-white py-3 rounded-lg font-semibold hover:shadow-lg transition">Join wait list</button>
+            </form>
+            <p id="successMessage" class="text-center text-green-600 font-medium mt-4 hidden">🎉 You're on the list! We'll be in touch.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        function openModal() {
+            document.getElementById('waitlistModal').classList.remove('hidden');
+            document.getElementById('waitlistModal').classList.add('flex');
+        }
+        function closeModal() {
+            document.getElementById('waitlistModal').classList.add('hidden');
+            document.getElementById('waitlistModal').classList.remove('flex');
+            document.getElementById('successMessage').classList.add('hidden');
+            document.getElementById('waitlistForm').reset();
+        }
+        document.getElementById('waitlistModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+        document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('waitlistForm').classList.add('hidden');
+            document.getElementById('successMessage').classList.remove('hidden');
+            setTimeout(closeModal, 3000);
+        });
+
+        function toggleBilling() {
+            const isAnnual = document.getElementById('billing-toggle').checked;
+            document.querySelectorAll('.price-value').forEach(el => {
+                const monthly = el.dataset.monthly;
+                const annual = el.dataset.annual;
+                el.textContent = isAnnual && annual ? Number(annual).toLocaleString() : monthly;
+            });
+            document.querySelectorAll('.period-text').forEach(el => el.textContent = isAnnual ? '/yr' : '/mo');
+            document.querySelectorAll('.annual-note').forEach(el => el.classList.toggle('hidden', !isAnnual));
+        }
+
+        // Slider
+        const track = document.getElementById('sliderTrack');
+        const dots = document.querySelectorAll('.dot');
+        let currentIndex = 0;
+        function goToSlide(index) {
+            track.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+            currentIndex = index;
+        }
+        setInterval(() => { currentIndex = (currentIndex + 1) % dots.length; goToSlide(currentIndex); }, 4000);
+        dots.forEach(dot => dot.addEventListener('click', () => goToSlide(parseInt(dot.dataset.index))));
+    </script>
+</body>
+</html>
