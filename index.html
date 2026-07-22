@@ -92,13 +92,13 @@
                             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00B057] opacity-75"></span>
                             <span class="relative inline-flex rounded-full h-3 w-3 bg-[#00B057]"></span>
                         </span>
-                        KRA‑compliant bookkeeping
+                        KRA-compliant bookkeeping
                     </span>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
                         Bookkeeping <span class="text-[#00B057]"><br>built for</span><br>Kenyan businesses
                     </h1>
                     <p class="text-lg md:text-xl text-blue-100/90 max-w-lg">
-                        Invoices, quotations, work orders, inventory. All in one place. Automate your accounting and stay tax‑ready with real‑time KRA compliance.
+                        Invoices, quotations, work orders, inventory. All in one place. Automate your accounting and stay tax-ready with real-time KRA compliance.
                     </p>
                     <div class="flex flex-wrap gap-4">
                         <a href="https://app.sentibooks.com" class="bg-green-gradient text-white px-8 py-4 rounded-lg font-semibold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
@@ -109,38 +109,11 @@
                         </a>
                     </div>
                 </div>
-                <!-- Slider with 5 slides alternating mobile/desktop -->
+                <!-- Dynamic Slider -->
                 <div class="hidden lg:block fade-in" style="animation-delay: 0.2s;">
                     <div class="slider-container">
-                        <div class="slider-track" id="sliderTrack">
-                            <!-- Slide 1: Mobile -->
-                            <div class="slider-slide">
-                                <div class="phone-frame"><div class="phone-screen"><div class="phone-notch"></div><img src="assets/images/01.jpg" alt="Sentibooks mobile view 1" class="w-full h-auto"></div></div>
-                            </div>
-                            <!-- Slide 2: Desktop -->
-                            <div class="slider-slide">
-                                <div class="monitor-frame"><div class="monitor-screen"><img src="assets/images/02.jpg" alt="Sentibooks desktop view 1" class="w-full h-auto"></div><div class="monitor-stand"></div><div class="monitor-base"></div></div>
-                            </div>
-                            <!-- Slide 3: Mobile -->
-                            <div class="slider-slide">
-                                <div class="phone-frame"><div class="phone-screen"><div class="phone-notch"></div><img src="assets/images/03.jpg" alt="Sentibooks mobile view 2" class="w-full h-auto"></div></div>
-                            </div>
-                            <!-- Slide 4: Desktop -->
-                            <div class="slider-slide">
-                                <div class="monitor-frame"><div class="monitor-screen"><img src="assets/images/04.jpg" alt="Sentibooks desktop view 2" class="w-full h-auto"></div><div class="monitor-stand"></div><div class="monitor-base"></div></div>
-                            </div>
-                            <!-- Slide 5: Mobile -->
-                            <div class="slider-slide">
-                                <div class="phone-frame"><div class="phone-screen"><div class="phone-notch"></div><img src="assets/images/05.jpg" alt="Sentibooks mobile view 3" class="w-full h-auto"></div></div>
-                            </div>
-                        </div>
-                        <div class="slider-dots">
-                            <span class="dot active" data-index="0"></span>
-                            <span class="dot" data-index="1"></span>
-                            <span class="dot" data-index="2"></span>
-                            <span class="dot" data-index="3"></span>
-                            <span class="dot" data-index="4"></span>
-                        </div>
+                        <div class="slider-track" id="sliderTrack"></div>
+                        <div class="slider-dots" id="sliderDots"></div>
                     </div>
                 </div>
             </div>
@@ -152,7 +125,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <h2 class="text-3xl md:text-4xl font-extrabold text-[#0B2A6A]">Everything you need to run your business</h2>
-                <p class="mt-4 text-lg text-gray-600">From quotations to work orders, inventory to multi‑branch management. Sentibooks covers the full operations cycle.</p>
+                <p class="mt-4 text-lg text-gray-600">From quotations to work orders, inventory to multi-branch management. Sentibooks covers the full operations cycle.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
@@ -168,37 +141,37 @@
                 <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
                     <div class="h-12 w-12 bg-blue-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#0B2A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg></div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Inventory Management</h3>
-                    <p class="text-gray-600">Track stock levels per branch, adjust inventory, and view full movement history. Low‑stock alerts keep you restocked.</p>
+                    <p class="text-gray-600">Track stock levels per branch, adjust inventory, and view full movement history. Low-stock alerts keep you restocked.</p>
                 </div>
                 <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
                     <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#00B057]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" /></svg></div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Customer & Price Lists</h3>
-                    <p class="text-gray-600">Manage customers with custom price lists. OTP‑protected price overrides keep sensitive pricing secure.</p>
+                    <p class="text-gray-600">Manage customers with custom price lists. OTP-protected price overrides keep sensitive pricing secure.</p>
                 </div>
                 <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
                     <div class="h-12 w-12 bg-blue-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#0B2A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg></div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Multi‑Branch & Workspaces</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Multi-Branch & Workspaces</h3>
                     <p class="text-gray-600">Manage multiple branches under one organization. Switch between workspaces for separate businesses.</p>
                 </div>
                 <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
                     <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#00B057]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" /></svg></div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Team & Permissions</h3>
-                    <p class="text-gray-600">Invite team members with role‑based access. Owners and admins can assign workers, while viewers have read‑only access.</p>
+                    <p class="text-gray-600">Invite team members with role-based access. Owners and admins can assign workers, while viewers have read-only access.</p>
                 </div>
                 <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
                     <div class="h-12 w-12 bg-blue-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#0B2A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /></svg></div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Chart of Accounts & VAT</h3>
-                    <p class="text-gray-600">Pre‑loaded Kenyan SME chart of accounts. Auto‑calculate VAT on invoices and purchases. KRA PIN and tax registration management.</p>
+                    <p class="text-gray-600">Pre-loaded Kenyan SME chart of accounts. Auto-calculate VAT on invoices and purchases. KRA PIN and tax registration management.</p>
                 </div>
                 <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
                     <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#00B057]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Audit Logs & Security</h3>
-                    <p class="text-gray-600">Every change is tracked with full audit history. Soft‑deletes protect against accidental data loss. OTP verification for sensitive actions.</p>
+                    <p class="text-gray-600">Every change is tracked with full audit history. Soft-deletes protect against accidental data loss. OTP verification for sensitive actions.</p>
                 </div>
                 <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
                     <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#00B057]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg></div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Purchases & Expenses (coming soon)</h3>
-                    <p class="text-gray-600">Supplier bills, purchase orders, LPOs, and expense tracking. Banking and M‑Pesa reconciliation on the roadmap.</p>
+                    <p class="text-gray-600">Supplier bills, purchase orders, LPOs, and expense tracking. Banking and M-Pesa reconciliation on the roadmap.</p>
                 </div>
             </div>
         </div>
@@ -211,13 +184,13 @@
             <span class="bg-white/10 backdrop-blur-md text-sm font-medium px-4 py-2 rounded-full inline-block mb-6">🇰🇪 KRA Ready</span>
             <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Stay compliant, effortlessly</h2>
             <p class="text-lg text-blue-100/90 max-w-2xl mx-auto mb-12">
-                Sentibooks helps you maintain KRA‑compliant records with a pre‑built Kenyan chart of accounts, automatic VAT calculations, and tax registration management — so you're always ready for filing.
+                Sentibooks helps you maintain KRA-compliant records with a pre-built Kenyan chart of accounts, automatic VAT calculations, and tax registration management - so you're always ready for filing.
             </p>
             <div class="grid md:grid-cols-3 gap-8 text-left max-w-4xl mx-auto">
                 <div class="glass rounded-2xl p-6 card-hover">
                     <div class="text-4xl mb-4">📄</div>
                     <h3 class="font-semibold text-xl mb-2">VAT Tracking</h3>
-                    <p class="text-sm text-blue-200">Auto‑compute output/input VAT on every invoice and quotation. Export summaries for your accountant or iTax filing.</p>
+                    <p class="text-sm text-blue-200">Auto-compute output/input VAT on every invoice and quotation. Export summaries for your accountant or iTax filing.</p>
                 </div>
                 <div class="glass rounded-2xl p-6 card-hover">
                     <div class="text-4xl mb-4">🧾</div>
@@ -226,8 +199,8 @@
                 </div>
                 <div class="glass rounded-2xl p-6 card-hover">
                     <div class="text-4xl mb-4">📊</div>
-                    <h3 class="font-semibold text-xl mb-2">Audit‑Ready Records</h3>
-                    <p class="text-sm text-blue-200">Full audit logs track every change. Soft‑deletes keep history intact. Your accountant will thank you.</p>
+                    <h3 class="font-semibold text-xl mb-2">Audit-Ready Records</h3>
+                    <p class="text-sm text-blue-200">Full audit logs track every change. Soft-deletes keep history intact. Your accountant will thank you.</p>
                 </div>
             </div>
         </div>
@@ -356,7 +329,7 @@
                         <li class="flex items-start gap-2 font-medium"><span class="text-[#00B057] font-bold">✓</span> Everything in Business</li>
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> <strong>Payroll included</strong> (PAYE, SHIF, NSSF, Leave)</li>
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Bank reconciliation</li>
-                        <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> M‑Pesa integration</li>
+                        <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> M-Pesa integration</li>
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> All advanced reports</li>
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Up to 30 users & 5 branches</li>
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Dedicated support</li>
@@ -364,7 +337,7 @@
                     <a href="https://app.sentibooks.com" class="block w-full bg-white border-2 border-[#0B2A6A] text-[#0B2A6A] text-center py-3 rounded-lg font-semibold hover:bg-[#0B2A6A] hover:text-white transition">Start trial</a>
                 </div>
             </div>
-            <p class="text-center text-sm text-gray-500 mt-8"><!-- All prices exclude VAT. --></p>
+            <p class="text-center text-sm text-gray-500 mt-8">All prices exclude VAT.</p>
         </div>
     </section>
 
@@ -434,7 +407,6 @@
         document.getElementById('year').textContent = new Date().getFullYear();
 
         function switchCycle(cycle) {
-            // Update active tab
             document.querySelectorAll('.billing-tab').forEach(tab => {
                 if (tab.dataset.cycle === cycle) {
                     tab.classList.add('active');
@@ -444,7 +416,6 @@
                     tab.classList.remove('bg-white', 'text-[#0B2A6A]', 'shadow-sm');
                 }
             });
-            // Show/hide prices
             document.querySelectorAll('.monthly-price').forEach(el => el.classList.toggle('hidden', cycle !== 'monthly'));
             document.querySelectorAll('.quarterly-price').forEach(el => el.classList.toggle('hidden', cycle !== 'quarterly'));
             document.querySelectorAll('.yearly-price').forEach(el => el.classList.toggle('hidden', cycle !== 'yearly'));
@@ -452,52 +423,90 @@
             document.querySelectorAll('.yearly-note').forEach(el => el.classList.toggle('hidden', cycle !== 'yearly'));
         }
 
-        // Slider
+        // ========== SLIDER CONFIGURATION ==========
+        const slides = [
+            { src: 'assets/images/01.jpg', type: 'mobile',  alt: 'Sentibooks mobile view 1' },
+            { src: 'assets/images/02.jpg', type: 'desktop', alt: 'Sentibooks desktop view 1' },
+            { src: 'assets/images/03.jpg', type: 'mobile',  alt: 'Sentibooks mobile view 2' },
+            { src: 'assets/images/04.jpg', type: 'desktop', alt: 'Sentibooks desktop view 2' },
+            { src: 'assets/images/05.jpg', type: 'mobile',  alt: 'Sentibooks mobile view 3' },
+            { src: 'assets/images/06.jpg', type: 'desktop',  alt: 'Sentibooks desktop view 3' }
+        ];
+
+        // ========== BUILD SLIDES & DOTS ==========
         const track = document.getElementById('sliderTrack');
-        const dots = document.querySelectorAll('.dot');
+        const dotsContainer = document.getElementById('sliderDots');
+
+        slides.forEach((slide, index) => {
+            const slideDiv = document.createElement('div');
+            slideDiv.className = 'slider-slide';
+            slideDiv.innerHTML = slide.type === 'mobile' ? `
+                <div class="phone-frame">
+                    <div class="phone-screen">
+                        <div class="phone-notch"></div>
+                        <img src="${slide.src}" alt="${slide.alt}" class="w-full h-auto">
+                    </div>
+                </div>
+            ` : `
+                <div class="monitor-frame">
+                    <div class="monitor-screen">
+                        <img src="${slide.src}" alt="${slide.alt}" class="w-full h-auto">
+                    </div>
+                    <div class="monitor-stand"></div>
+                    <div class="monitor-base"></div>
+                </div>
+            `;
+            track.appendChild(slideDiv);
+
+            const dot = document.createElement('span');
+            dot.className = 'dot' + (index === 0 ? ' active' : '');
+            dot.dataset.index = index;
+            dotsContainer.appendChild(dot);
+        });
+
+        // ========== SLIDER LOGIC ==========
         let currentIndex = 0;
+        const allSlides = document.querySelectorAll('.slider-slide');
+        const dots = document.querySelectorAll('.dot');
+
         function goToSlide(index) {
             track.style.transform = `translateX(-${index * 100}%)`;
-            dots.forEach(dot => dot.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
             dots[index].classList.add('active');
             currentIndex = index;
         }
-        setInterval(() => { currentIndex = (currentIndex + 1) % dots.length; goToSlide(currentIndex); }, 4000);
-        dots.forEach(dot => dot.addEventListener('click', () => goToSlide(parseInt(dot.dataset.index))));
 
-        // Lightbox functionality
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % dots.length;
+            goToSlide(currentIndex);
+        }, 4000);
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => goToSlide(parseInt(dot.dataset.index)));
+        });
+
+        // Lightbox
         const modal = document.getElementById('imageModal');
         const modalImage = document.getElementById('modalImage');
         const closeModal = document.getElementById('closeModal');
-        const sliderSlides = document.querySelectorAll('.slider-slide');
 
-        sliderSlides.forEach(slide => {
+        allSlides.forEach(slide => {
             slide.addEventListener('click', (e) => {
-                // Prevent click on links or other interactive elements inside the slide
                 const img = slide.querySelector('img');
                 if (img) {
                     modalImage.src = img.src;
                     modalImage.alt = img.alt;
-                    modal.style.display = 'flex'; // show modal
+                    modal.style.display = 'flex';
                 }
             });
         });
 
-        closeModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
+        closeModal.addEventListener('click', () => modal.style.display = 'none');
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
+            if (e.target === modal) modal.style.display = 'none';
         });
-
-        // Close with Escape key
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal.style.display === 'flex') {
-                modal.style.display = 'none';
-            }
+            if (e.key === 'Escape' && modal.style.display === 'flex') modal.style.display = 'none';
         });
     </script>
 </body>
