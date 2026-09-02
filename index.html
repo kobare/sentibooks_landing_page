@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sentibooks – Smart Bookkeeping for Kenyan SMEs</title>
-    <meta name="description" content="Sentibooks is the modern accounting platform for Kenyan businesses. Invoicing, quotations, work orders, inventory, VAT, and KRA compliance made effortless.">
+    <meta name="description" content="Sentibooks is the modern accounting platform for Kenyan businesses. Invoicing, quotations, work orders, inventory, banking, payroll, VAT, and tax-ready records.">
     <link rel="icon" type="image/png" href="assets/images/logo/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,7 +70,7 @@
             </div>
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
                 <a href="#features" class="hover:text-[#0B2A6A] transition">Features</a>
-                <a href="#compliance" class="hover:text-[#0B2A6A] transition">Compliance</a>
+                <a href="#compliance" class="hover:text-[#0B2A6A] transition">Tax Ready</a>
                 <a href="#pricing" class="hover:text-[#0B2A6A] transition">Pricing</a>
                 <a href="https://app.sentibooks.com" class="text-[#0B2A6A] font-semibold">Sign In</a>
                 <a href="https://app.sentibooks.com" class="bg-green-gradient text-white px-6 py-2.5 rounded-lg hover:shadow-lg transition-all shadow-md">Free Trial</a>
@@ -92,13 +92,13 @@
                             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00B057] opacity-75"></span>
                             <span class="relative inline-flex rounded-full h-3 w-3 bg-[#00B057]"></span>
                         </span>
-                        KRA-compliant bookkeeping
+                        Tax-ready bookkeeping
                     </span>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
                         Bookkeeping <span class="text-[#00B057]"><br>built for</span><br>Kenyan businesses
                     </h1>
                     <p class="text-lg md:text-xl text-blue-100/90 max-w-lg">
-                        Invoices, quotations, work orders, inventory. All in one place. Automate your accounting and stay tax-ready with real-time KRA compliance.
+                        Invoices, quotations, work orders, inventory, banking, payroll, walk-in sales — all in one place. Automate your accounting and stay tax-ready.
                     </p>
                     <div class="flex flex-wrap gap-4">
                         <a href="https://app.sentibooks.com" class="bg-green-gradient text-white px-8 py-4 rounded-lg font-semibold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
@@ -125,66 +125,129 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <h2 class="text-3xl md:text-4xl font-extrabold text-[#0B2A6A]">Everything you need to run your business</h2>
-                <p class="mt-4 text-lg text-gray-600">From quotations to work orders, inventory to multi-branch management. Sentibooks covers the full operations cycle.</p>
+                <p class="mt-4 text-lg text-gray-600">From quotations to work orders, inventory to banking, payroll to full accounting. Sentibooks covers the complete business cycle.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Invoicing & Quotations -->
                 <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
                     <div class="h-12 w-12 bg-[#0B2A6A]/10 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#0B2A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg></div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Invoicing & Quotations</h3>
                     <p class="text-gray-600">Create professional invoices and quotations. Convert quotes to invoices or work orders in one click. Download PDFs and track statuses.</p>
                 </div>
+                <!-- Recurring Invoices -->
+                <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
+                    <div class="h-12 w-12 bg-blue-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#0B2A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Recurring Invoices</h3>
+                    <p class="text-gray-600">Automate repeat billing with recurring invoices. Set schedules for weekly, monthly, or custom intervals. Save time on repeat customers.</p>
+                </div>
+                <!-- POS / Walk-in Sales -->
+                <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
+                    <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#00B057]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" /></svg></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">POS / Walk-in Sales</h3>
+                    <p class="text-gray-600">Generate instant sales receipts for walk-in customers, print on thermal printers, and record cash or mobile payments. Perfect for retail counters.</p>
+                </div>
+                <!-- Work Orders & Tasks -->
                 <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
                     <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#00B057]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg></div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Work Orders & Tasks</h3>
                     <p class="text-gray-600">Create job cards, assign tasks to workers, track completion with progress bars. Partial invoicing from completed tasks.</p>
                 </div>
+                <!-- Inventory Management -->
                 <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
                     <div class="h-12 w-12 bg-blue-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#0B2A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg></div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Inventory Management</h3>
                     <p class="text-gray-600">Track stock levels per branch, adjust inventory, and view full movement history. Low-stock alerts keep you restocked.</p>
                 </div>
+                <!-- Customer & Price Lists -->
                 <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
                     <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#00B057]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" /></svg></div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Customer & Price Lists</h3>
                     <p class="text-gray-600">Manage customers with custom price lists. OTP-protected price overrides keep sensitive pricing secure.</p>
                 </div>
+                <!-- Multi-Branch & Workspaces -->
                 <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
                     <div class="h-12 w-12 bg-blue-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#0B2A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg></div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Multi-Branch & Workspaces</h3>
                     <p class="text-gray-600">Manage multiple branches under one organization. Switch between workspaces for separate businesses.</p>
                 </div>
+                <!-- Team & Permissions -->
                 <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
                     <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#00B057]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" /></svg></div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Team & Permissions</h3>
                     <p class="text-gray-600">Invite team members with role-based access. Owners and admins can assign workers, while viewers have read-only access.</p>
                 </div>
+                <!-- Chart of Accounts & VAT -->
                 <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
                     <div class="h-12 w-12 bg-blue-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#0B2A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /></svg></div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Chart of Accounts & VAT</h3>
                     <p class="text-gray-600">Pre-loaded Kenyan SME chart of accounts. Auto-calculate VAT on invoices and purchases. KRA PIN and tax registration management.</p>
                 </div>
+                <!-- Audit Logs & Security -->
                 <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
                     <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#00B057]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Audit Logs & Security</h3>
                     <p class="text-gray-600">Every change is tracked with full audit history. Soft-deletes protect against accidental data loss. OTP verification for sensitive actions.</p>
                 </div>
+                <!-- Purchases & Expenses -->
                 <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
                     <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#00B057]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg></div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Purchases & Expenses (coming soon)</h3>
-                    <p class="text-gray-600">Supplier bills, purchase orders, LPOs, and expense tracking. Banking and M-Pesa reconciliation on the roadmap.</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Purchases & Expenses</h3>
+                    <p class="text-gray-600">Record supplier bills, create purchase orders, manage LPOs, and track expenses. Full payables and expense management.</p>
+                </div>
+                <!-- Credit Notes & Refunds -->
+                <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
+                    <div class="h-12 w-12 bg-blue-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#0B2A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z" /></svg></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Credit Notes & Refunds</h3>
+                    <p class="text-gray-600">Issue credit notes for invoices and supplier bills. Process refunds and track adjustments. Keep your books accurate.</p>
+                </div>
+                <!-- Banking & Reconciliations -->
+                <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
+                    <div class="h-12 w-12 bg-blue-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#0B2A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M3 10v11h18V10" /></svg></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Banking & Reconciliations</h3>
+                    <p class="text-gray-600">Record bank and M-Pesa transactions manually, then match and reconcile them with your statements. No API connections required.</p>
+                </div>
+                <!-- Payroll & Statutory -->
+                <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
+                    <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#00B057]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Payroll & Statutory</h3>
+                    <p class="text-gray-600">Run payroll daily, weekly, biweekly, or monthly. Auto‑calculate PAYE, SHIF, NSSF, NITA and generate payslips.</p>
+                </div>
+                <!-- Salary Advances & Loans -->
+                <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
+                    <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#00B057]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z" /></svg></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Salary Advances & Loans</h3>
+                    <p class="text-gray-600">Manage salary advances and employee loans. Deduct repayments from payroll in installments as agreed.</p>
+                </div>
+                <!-- Contracts & Timesheets -->
+                <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
+                    <div class="h-12 w-12 bg-blue-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#0B2A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Contracts & Timesheets</h3>
+                    <p class="text-gray-600">Manage permanent, contract, and casual staff. Set hourly or monthly rates, track timesheets for accurate billing.</p>
+                </div>
+                <!-- Leave Management -->
+                <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
+                    <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#00B057]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Leave Management</h3>
+                    <p class="text-gray-600">Track leave balances, manage approvals, and view team availability. Integrated with payroll for accurate accruals.</p>
+                </div>
+                <!-- Accounting & Reports -->
+                <div class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 card-hover border border-gray-100">
+                    <div class="h-12 w-12 bg-blue-100 rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-[#0B2A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" /></svg></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Accounting & Reports</h3>
+                    <p class="text-gray-600">Trial balance, balance sheets, chart of accounts, general ledger, journal entries, fixed asset register, and adjusting entries — all built‑in.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Compliance Section -->
+    <!-- Tax Ready Section -->
     <section id="compliance" class="bg-blue-gradient py-20 relative overflow-hidden">
         <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')]"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
-            <span class="bg-white/10 backdrop-blur-md text-sm font-medium px-4 py-2 rounded-full inline-block mb-6">🇰🇪 KRA Ready</span>
-            <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Stay compliant, effortlessly</h2>
+            <span class="bg-white/10 backdrop-blur-md text-sm font-medium px-4 py-2 rounded-full inline-block mb-6">🇰🇪 Tax Ready</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Tax-ready, audit-friendly</h2>
             <p class="text-lg text-blue-100/90 max-w-2xl mx-auto mb-12">
-                Sentibooks helps you maintain KRA-compliant records with a pre-built Kenyan chart of accounts, automatic VAT calculations, and tax registration management - so you're always ready for filing.
+                Sentibooks helps you maintain tax-ready records with a pre-built Kenyan chart of accounts, automatic VAT calculations, and tax registration management - so you're always ready for filing.
             </p>
             <div class="grid md:grid-cols-3 gap-8 text-left max-w-4xl mx-auto">
                 <div class="glass rounded-2xl p-6 card-hover">
@@ -214,7 +277,7 @@
                 <p class="mt-4 text-lg text-gray-600">Plans designed for every stage of your business. No hidden fees.</p>
             </div>
 
-            <!-- Billing cycle tabs (matching the app) -->
+            <!-- Billing cycle tabs -->
             <div class="flex justify-center mb-12">
                 <div class="inline-flex bg-gray-100 rounded-lg p-1">
                     <button class="billing-tab active" data-cycle="monthly" onclick="switchCycle('monthly')">Monthly</button>
@@ -233,7 +296,6 @@
                 <div class="bg-white rounded-2xl shadow-sm border border-gray-200 card-hover flex flex-col p-6">
                     <h3 class="text-xl font-bold text-gray-900 mb-1">Starter</h3>
                     <p class="text-gray-500 text-sm mb-4">For sole traders & freelancers</p>
-                    <!-- Price -->
                     <div class="mb-4">
                         <div class="monthly-price">
                             <span class="text-3xl font-extrabold text-[#0B2A6A]">KES 1,500</span>
@@ -250,7 +312,6 @@
                         <p class="text-sm text-green-600 font-medium quarterly-note hidden">Equivalent to 1,427/mo</p>
                         <p class="text-sm text-green-600 font-medium yearly-note hidden">Equivalent to 1,350/mo</p>
                     </div>
-                    <!-- Features -->
                     <ul class="space-y-3 text-sm text-gray-600 mb-8 flex-1">
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Unlimited invoicing</li>
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Customers & price lists</li>
@@ -271,7 +332,6 @@
                     <span class="absolute -top-3 right-4 bg-green-gradient text-white text-xs font-bold px-3 py-1 rounded-full shadow">MOST POPULAR</span>
                     <h3 class="text-xl font-bold text-gray-900 mb-1">Business</h3>
                     <p class="text-gray-500 text-sm mb-4">For growing SMEs</p>
-                    <!-- Price -->
                     <div class="mb-4">
                         <div class="monthly-price">
                             <span class="text-3xl font-extrabold text-[#00B057]">KES 3,000</span>
@@ -288,14 +348,13 @@
                         <p class="text-sm text-green-600 font-medium quarterly-note hidden">Equivalent to 2,850/mo</p>
                         <p class="text-sm text-green-600 font-medium yearly-note hidden">Equivalent to 2,700/mo</p>
                     </div>
-                    <!-- Features -->
                     <ul class="space-y-3 text-sm text-gray-600 mb-8 flex-1">
                         <li class="flex items-start gap-2 font-medium"><span class="text-[#00B057] font-bold">✓</span> Everything in Starter</li>
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Quotations & estimates</li>
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Work orders & tasks</li>
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Inventory & stock</li>
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Bills & purchase orders</li>
-                        <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Bank accounts</li>
+                        <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Manual bank reconciliation</li>
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Advanced reports</li>
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Up to 15 users & 3 branches</li>
                         <li class="flex items-start gap-2 text-gray-400"><span class="font-bold">✕</span> Payroll</li>
@@ -307,7 +366,6 @@
                 <div class="bg-white rounded-2xl shadow-sm border border-gray-200 card-hover flex flex-col p-6">
                     <h3 class="text-xl font-bold text-gray-900 mb-1">Advanced</h3>
                     <p class="text-gray-500 text-sm mb-4">For established businesses</p>
-                    <!-- Price -->
                     <div class="mb-4">
                         <div class="monthly-price">
                             <span class="text-3xl font-extrabold text-[#0B2A6A]">KES 5,000</span>
@@ -324,12 +382,11 @@
                         <p class="text-sm text-green-600 font-medium quarterly-note hidden">Equivalent to 4,750/mo</p>
                         <p class="text-sm text-green-600 font-medium yearly-note hidden">Equivalent to 4,500/mo</p>
                     </div>
-                    <!-- Features -->
                     <ul class="space-y-3 text-sm text-gray-600 mb-8 flex-1">
                         <li class="flex items-start gap-2 font-medium"><span class="text-[#00B057] font-bold">✓</span> Everything in Business</li>
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> <strong>Payroll included</strong> (PAYE, SHIF, NSSF, Leave)</li>
-                        <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Bank reconciliation</li>
-                        <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> M-Pesa integration</li>
+                        <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Manual bank reconciliation</li>
+                        <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> M-Pesa transaction uploads</li>
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> All advanced reports</li>
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Up to 30 users & 5 branches</li>
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Dedicated support</li>
