@@ -57,6 +57,15 @@
         .billing-tab.active { background: #fff; color: #0B2A6A; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
         .billing-tab:not(.active) { color: #6b7280; }
         .billing-tab:not(.active):hover { color: #374151; }
+
+        .app-modal-enter { animation: modalIn 0.2s ease-out; }
+        @keyframes modalIn { from { opacity: 0; transform: scale(0.96) translateY(8px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+
+        /* Current-app pill under navbar */
+        #currentAppPill {
+            animation: pillIn 0.3s ease-out;
+        }
+        @keyframes pillIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body class="bg-white text-gray-800 antialiased">
@@ -72,14 +81,25 @@
                 <a href="#features" class="hover:text-[#0B2A6A] transition">Features</a>
                 <a href="#compliance" class="hover:text-[#0B2A6A] transition">Tax Ready</a>
                 <a href="#pricing" class="hover:text-[#0B2A6A] transition">Pricing</a>
-                <a href="https://app.sentibooks.com" class="text-[#0B2A6A] font-semibold">Sign In</a>
-                <a href="https://app.sentibooks.com" class="bg-green-gradient text-white px-6 py-2.5 rounded-lg hover:shadow-lg transition-all shadow-md">Free Trial</a>
+                <a href="#" onclick="openAppPicker(event)" class="text-[#0B2A6A] font-semibold">Sign In</a>
+                <a href="#" onclick="openAppPicker(event)" class="bg-green-gradient text-white px-6 py-2.5 rounded-lg hover:shadow-lg transition-all shadow-md">Free Trial</a>
             </div>
             <div class="md:hidden flex items-center gap-4">
-                <a href="https://app.sentibooks.com" class="text-[#0B2A6A] font-semibold text-sm">Sign In</a>
+                <a href="#" onclick="openAppPicker(event)" class="text-[#0B2A6A] font-semibold text-sm">Sign In</a>
             </div>
         </div>
     </nav>
+
+    <!-- ====== CURRENT APP PILL (shown only when a preference is stored) ====== -->
+    <div id="currentAppPill" class="hidden bg-blue-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-center gap-2 text-sm">
+            <span class="w-2 h-2 rounded-full bg-[#00B057] shrink-0"></span>
+            <span class="text-blue-100/90">Your app:</span>
+            <span id="currentAppName" class="font-semibold">—</span>
+            <span class="text-blue-100/50 mx-1">·</span>
+            <a href="#" onclick="switchApp(event)" class="underline hover:no-underline font-semibold text-white">Change</a>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="relative bg-blue-gradient hero-animation text-white overflow-hidden py-24 md:py-32">
@@ -101,7 +121,7 @@
                         Invoices, quotations, work orders, inventory, banking, payroll, walk-in sales — all in one place. Automate your accounting and stay tax-ready.
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <a href="https://app.sentibooks.com" class="bg-green-gradient text-white px-8 py-4 rounded-lg font-semibold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
+                        <a href="#" onclick="openAppPicker(event)" class="bg-green-gradient text-white px-8 py-4 rounded-lg font-semibold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
                             Start free trial
                         </a>
                         <a href="https://youtube.com/@Sentibooks" target="_blank" class="glass text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition">
@@ -324,7 +344,7 @@
                         <li class="flex items-start gap-2 text-gray-400"><span class="font-bold">✕</span> Inventory</li>
                         <li class="flex items-start gap-2 text-gray-400"><span class="font-bold">✕</span> Payroll</li>
                     </ul>
-                    <a href="https://app.sentibooks.com" class="block w-full bg-[#0B2A6A] text-white text-center py-3 rounded-lg font-semibold hover:bg-[#0C4697] transition">Start trial</a>
+                    <a href="#" onclick="openAppPicker(event)" class="block w-full bg-[#0B2A6A] text-white text-center py-3 rounded-lg font-semibold hover:bg-[#0C4697] transition">Start trial</a>
                 </div>
 
                 <!-- Business -->
@@ -359,7 +379,7 @@
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Up to 15 users & 3 branches</li>
                         <li class="flex items-start gap-2 text-gray-400"><span class="font-bold">✕</span> Payroll</li>
                     </ul>
-                    <a href="https://app.sentibooks.com" class="block w-full bg-green-gradient text-white text-center py-3 rounded-lg font-semibold hover:shadow-lg transition">Start trial</a>
+                    <a href="#" onclick="openAppPicker(event)" class="block w-full bg-green-gradient text-white text-center py-3 rounded-lg font-semibold hover:shadow-lg transition">Start trial</a>
                 </div>
 
                 <!-- Advanced -->
@@ -391,7 +411,7 @@
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Up to 30 users & 5 branches</li>
                         <li class="flex items-start gap-2"><span class="text-[#00B057] font-bold">✓</span> Dedicated support</li>
                     </ul>
-                    <a href="https://app.sentibooks.com" class="block w-full bg-white border-2 border-[#0B2A6A] text-[#0B2A6A] text-center py-3 rounded-lg font-semibold hover:bg-[#0B2A6A] hover:text-white transition">Start trial</a>
+                    <a href="#" onclick="openAppPicker(event)" class="block w-full bg-white border-2 border-[#0B2A6A] text-[#0B2A6A] text-center py-3 rounded-lg font-semibold hover:bg-[#0B2A6A] hover:text-white transition">Start trial</a>
                 </div>
             </div>
             <p class="text-center text-sm text-gray-500 mt-8">All prices exclude VAT.</p>
@@ -405,7 +425,7 @@
                 <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Ready to simplify your accounting?</h2>
                 <p class="text-blue-100/90 text-lg mb-8 max-w-xl mx-auto">Join Kenyan businesses that trust Sentibooks for daily bookkeeping and tax compliance.</p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="https://app.sentibooks.com" class="bg-green-gradient text-white px-8 py-4 rounded-lg font-semibold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
+                    <a href="#" onclick="openAppPicker(event)" class="bg-green-gradient text-white px-8 py-4 rounded-lg font-semibold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
                         Get started free
                     </a>
                     <a href="https://youtube.com/@Sentibooks" target="_blank" class="glass text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition">
@@ -430,6 +450,7 @@
                         <li><a href="#features" class="hover:text-white transition">Features</a></li>
                         <li><a href="#pricing" class="hover:text-white transition">Pricing</a></li>
                         <li><a href="#" class="hover:text-white transition">Integrations</a></li>
+                        <li id="switchAppItem" class="hidden"><a href="#" onclick="switchApp(event)" class="hover:text-white transition">Switch App</a></li>
                     </ul>
                 </div>
                 <div>
@@ -454,6 +475,38 @@
         </div>
     </footer>
 
+    <!-- ====== APP PICKER MODAL ====== -->
+    <div id="appPickerModal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+        <div class="app-modal-enter bg-white rounded-2xl max-w-md w-full shadow-2xl relative overflow-hidden">
+            <!-- Header -->
+            <div class="relative bg-blue-gradient px-6 pt-6 pb-5 text-white">
+                <button onclick="closeAppPicker()" aria-label="Close" class="absolute top-4 right-4 text-white/70 hover:text-white transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
+                <img src="assets/images/logo/logo-2.png" alt="Sentibooks" class="h-11 w-11 rounded-xl mb-3">
+                <h3 class="text-xl font-extrabold tracking-tight">Choose your app</h3>
+                <p class="text-sm text-blue-100/80 mt-1">Select the Sentibooks app built for your industry.</p>
+            </div>
+
+            <!-- Body -->
+            <div id="appList" class="p-3 max-h-[55vh] overflow-y-auto"></div>
+
+            <!-- Remember choice (unchecked by default) -->
+            <div class="px-6 py-3 border-t border-gray-100 bg-white">
+                <label class="flex items-center gap-2.5 cursor-pointer select-none">
+                    <input type="checkbox" id="rememberChoice"
+                           class="h-4 w-4 rounded border-gray-300 focus:ring-2 focus:ring-[#00B057] focus:ring-offset-0 accent-[#00B057]">
+                    <span class="text-sm text-gray-600">Remember my choice next time</span>
+                </label>
+            </div>
+
+            <!-- Footer -->
+            <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 text-xs text-gray-500 text-center">
+                More industry apps coming soon. Need a custom one? <a href="#" class="text-[#0B2A6A] font-semibold hover:underline">Talk to us</a>.
+            </div>
+        </div>
+    </div>
+
     <!-- Image Modal (Lightbox) -->
     <div id="imageModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4" style="display: none;">
         <span class="absolute top-4 right-4 text-white text-4xl cursor-pointer hover:text-gray-300 transition z-10" id="closeModal">&times;</span>
@@ -462,6 +515,146 @@
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // ============================================================
+        // ===== APP PICKER ===========================================
+        // ============================================================
+        const STORAGE_KEY = 'sentibooks_app_url';
+
+        const industryApps = [
+            {
+                name: 'General Business',
+                desc: 'For any business type — retail, services, freelancers',
+                url: 'https://app.sentibooks.com',
+                iconSvg: '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>'
+            },
+            {
+                name: 'Auto Repair & Garage',
+                desc: 'For garages, mechanics, and auto service shops',
+                url: 'https://garage.sentibooks.com',
+                iconSvg: '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>'
+            }
+            // 👇 Add new industries here
+        ];
+
+        let lastFocusedElement = null;
+
+        function renderIndustryApps() {
+            const list = document.getElementById('appList');
+            list.innerHTML = industryApps.map(app => `
+                <a href="${app.url}"
+                   class="flex items-center gap-4 p-4 rounded-xl border border-transparent hover:border-gray-200 hover:bg-gray-50 transition group">
+                    <div class="h-12 w-12 rounded-xl bg-[#0B2A6A]/10 text-[#0B2A6A] flex items-center justify-center shrink-0 transition group-hover:bg-[#00B057]/10 group-hover:text-[#00B057]">
+                        ${app.iconSvg}
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="font-semibold text-gray-900">${app.name}</div>
+                        <div class="text-sm text-gray-500 leading-snug">${app.desc}</div>
+                    </div>
+                    <svg class="w-5 h-5 text-gray-300 group-hover:text-[#00B057] transition shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            `).join('');
+        }
+
+        function openAppPicker(e) {
+            if (e) e.preventDefault();
+
+            const remembered = localStorage.getItem(STORAGE_KEY);
+            if (remembered && !openAppPicker.forceShow) {
+                window.location.href = remembered;
+                return;
+            }
+            openAppPicker.forceShow = false;
+
+            // Reset the checkbox to unchecked each time the modal opens
+            const rememberBox = document.getElementById('rememberChoice');
+            if (rememberBox) rememberBox.checked = false;
+
+            lastFocusedElement = document.activeElement;
+            const m = document.getElementById('appPickerModal');
+            m.classList.remove('hidden');
+            m.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeAppPicker() {
+            const m = document.getElementById('appPickerModal');
+            m.classList.add('hidden');
+            m.classList.remove('flex');
+            document.body.style.overflow = '';
+            if (lastFocusedElement) lastFocusedElement.focus();
+        }
+
+        // Footer / pill "Switch App" — clears stored preference and opens picker
+        function switchApp(e) {
+            if (e) e.preventDefault();
+            try { localStorage.removeItem(STORAGE_KEY); } catch (_) {}
+            openAppPicker.forceShow = true;
+            openAppPicker();
+            // Pill and footer link will hide after the next refresh; hide immediately for snappy UX
+            refreshStoredAppUI();
+        }
+
+        // Look up the stored app's display name from the URL
+        function getAppNameByUrl(url) {
+            const found = industryApps.find(a => a.url === url);
+            return found ? found.name : null;
+        }
+
+        // Show / hide: footer "Switch App" link AND top pill
+        function refreshStoredAppUI() {
+            const storedUrl = localStorage.getItem(STORAGE_KEY);
+            const switchItem = document.getElementById('switchAppItem');
+            const pill = document.getElementById('currentAppPill');
+            const pillName = document.getElementById('currentAppName');
+
+            if (storedUrl) {
+                const name = getAppNameByUrl(storedUrl) || storedUrl.replace(/^https?:\/\//, '').replace(/\/$/, '');
+                if (switchItem) switchItem.classList.remove('hidden');
+                if (pill && pillName) {
+                    pillName.textContent = name;
+                    pill.classList.remove('hidden');
+                }
+            } else {
+                if (switchItem) switchItem.classList.add('hidden');
+                if (pill) pill.classList.add('hidden');
+            }
+        }
+
+        // Close on backdrop click
+        document.getElementById('appPickerModal').addEventListener('click', function(e) {
+            if (e.target === this) closeAppPicker();
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const m = document.getElementById('appPickerModal');
+                if (!m.classList.contains('hidden')) closeAppPicker();
+            }
+        });
+
+        // Handle app selection — respect the "Remember my choice" checkbox
+        document.getElementById('appList').addEventListener('click', function(e) {
+            const link = e.target.closest('a');
+            if (!link || !link.href) return;
+
+            const remember = document.getElementById('rememberChoice').checked;
+            try {
+                if (remember) {
+                    localStorage.setItem(STORAGE_KEY, link.href);
+                } else {
+                    localStorage.removeItem(STORAGE_KEY);
+                }
+            } catch (_) {}
+        });
+
+        renderIndustryApps();
+        refreshStoredAppUI();
+        // ===== END APP PICKER =======================================
+        // ============================================================
 
         function switchCycle(cycle) {
             document.querySelectorAll('.billing-tab').forEach(tab => {
