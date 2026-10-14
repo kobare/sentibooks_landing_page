@@ -1,0 +1,36 @@
+organization:
+  legal_name: Sentibooks
+  founding_year: 2024
+  country: KE
+  city: Nairobi
+  email: hello@sentibooks.com
+  phone: "+254 700 000 000"
+  social:
+    facebook: sentibooks
+    instagram: sentibooks
+    tiktok: sentibooks
+    youtube: "@Sentibooks"
+    facebook_url: https://www.facebook.com/sentibooks
+    instagram_url: https://www.instagram.com/sentibooks
+    tiktok_url: https://www.tiktok.com/@sentibooks
+    youtube_url: https://youtube.com/@Sentibooks
+
+keywords:
+  primary: "bookkeeping software Kenya"
+  secondary:
+    - "accounting software for small business Kenya"
+    - "KRA compliant invoicing software"
+    - "VAT software Kenya"
+    - "payroll software Kenya"
+    - "M-Pesa reconciliation software"
+    - "bookkeeping for Kenyan SMEs"
+
+faq:
+  - q: "What is Sentibooks?"
+    a: "Sentibooks is a bookkeeping and accounting platform built for Kenyan businesses. It handles invoicing, expenses, VAT, payroll, and KRA compliance in one system."
+  - q: "How much does Sentibooks cost?"
+    a: "Sentibooks starts at KES 1,500 per month for sole traders and goes up to KES 5,000 per month for established businesses with payroll and multi-branch needs."
+  - q: "Does Sentibooks work for any business type?"
+    a: "Yes. Sentibooks is the general platform for any Kenyan business. For specific industries like auto repair, we have branded versions such as Gariclaim."
+  - q: "Is Sentibooks KRA compliant?"
+    a: "Yes. Sentibooks ships with a pre-built Kenyan chart of accounts, automatic VAT calculation on invoices and purchases, and stores your KRA PIN and tax registration types."

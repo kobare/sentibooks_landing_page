@@ -1,0 +1,9 @@
+<div class="bg-gray-50 rounded-2xl p-8 card-hover border border-gray-100">
+  <div class="h-12 w-12 {{ feature.icon_bg | default: 'bg-accent-gradient' }} rounded-xl flex items-center justify-center mb-5">
+    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="{{ feature.icon_path }}" />
+    </svg>
+  </div>
+  <h3 class="text-xl font-bold text-gray-900 mb-2">{{ feature.title }}</h3>
+  <p class="text-gray-600">{{ feature.description }}</p>
+</div>

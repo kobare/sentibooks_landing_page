@@ -1,0 +1,26 @@
+<section id="pricing" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-8">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">{{ site.data.pricing.heading }}</h2>
+      <p class="mt-4 text-lg text-gray-600">{{ site.data.pricing.subheading }}</p>
+    </div>
+
+    <div class="flex justify-center mb-12">
+      <div class="inline-flex bg-gray-200 rounded-lg p-1">
+        <button class="billing-tab active" data-cycle="monthly" onclick="switchCycle('monthly')">Monthly</button>
+        <button class="billing-tab" data-cycle="quarterly" onclick="switchCycle('quarterly')">
+          Quarterly <span class="text-[#00B057] font-semibold">(Save 5%)</span>
+        </button>
+        <button class="billing-tab" data-cycle="yearly" onclick="switchCycle('yearly')">
+          Yearly <span class="text-[#00B057] font-semibold">(Save 10%)</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      {% for plan in site.data.pricing.plans %}
+        {% include pricing-card.html plan=plan %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

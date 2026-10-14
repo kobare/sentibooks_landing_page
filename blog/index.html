@@ -1,0 +1,241 @@
+---
+layout: default
+title: Blog
+description: Practical guides on running a Kenyan business, covering invoicing, VAT, payroll, inventory, and M-Pesa.
+permalink: /blog/
+pagination:
+  enabled: true
+---
+
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="text-center mb-12 max-w-2xl mx-auto">
+      <span class="inline-block bg-[#00B057]/10 text-[#00B057] text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wide">Blog</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Sentibooks Blog</h1>
+      <p class="text-xl text-gray-600">Practical guides on running a Kenyan business.</p>
+    </header>
+
+    {% if paginator.posts.size > 0 %}
+      <!-- Search and filters -->
+      <div class="mb-10 max-w-3xl mx-auto">
+        <div class="relative mb-6">
+          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input type="search" id="blogSearch" placeholder="Search articles…" autocomplete="off"
+                 class="w-full pl-12 pr-4 py-3 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00B057] focus:border-transparent transition">
+        </div>
+
+        <div id="categoryFilters" class="flex flex-wrap justify-center gap-2">
+          <button data-category="" class="category-chip active px-4 py-1.5 rounded-full text-sm font-medium bg-gray-900 text-white transition">All</button>
+          {% for cat in site.data.blog_categories %}
+            <button data-category="{{ cat[0] }}" class="category-chip px-4 py-1.5 rounded-full text-sm font-medium bg-white text-gray-700 border border-gray-200 hover:border-gray-400 transition">{{ cat[0] }}</button>
+          {% endfor %}
+        </div>
+
+        <div id="searchStatus" class="hidden text-center mt-6 text-sm text-gray-500"></div>
+      </div>
+
+      <!-- Server-rendered default view -->
+      <div id="defaultView">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {% for post in paginator.posts %}
+            {% assign cat = site.data.blog_categories[post.category] %}
+            <article class="group bg-white border border-gray-200 rounded-2xl p-6 hover:border-[#00B057] hover:shadow-lg transition-all flex flex-col">
+              <div class="flex items-center justify-between mb-5">
+                <div class="w-10 h-10 rounded-xl {{ cat.bg | default: 'bg-gray-100' }} {{ cat.text | default: 'text-gray-700' }} flex items-center justify-center">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="{{ cat.icon | default: 'M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10l6 6v10a2 2 0 01-2 2z' }}" />
+                  </svg>
+                </div>
+                {% if post.category %}
+                  <span class="text-xs font-bold {{ cat.text | default: 'text-gray-700' }} uppercase tracking-wide">{{ post.category }}</span>
+                {% endif %}
+              </div>
+
+              <h2 class="text-lg font-bold text-gray-900 mb-3 leading-snug">
+                <a href="{{ post.url | relative_url }}" class="group-hover:text-[#00B057] transition">{{ post.title }}</a>
+              </h2>
+
+              <p class="text-sm text-gray-600 mb-6 flex-1 leading-relaxed">
+                {{ post.description | default: post.excerpt | strip_html | truncate: 130 }}
+              </p>
+
+              <div class="flex items-center justify-between pt-4 border-t border-gray-100 text-xs text-gray-500">
+                <div class="flex items-center gap-2">
+                  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+                  {% assign post_words = post.content | strip_html | number_of_words %}
+                  {% assign post_minutes = post_words | divided_by: 200 | plus: 1 %}
+                  <span>·</span>
+                  <span>{{ post_minutes }} min read</span>
+                </div>
+                <svg class="w-4 h-4 text-gray-400 group-hover:text-[#00B057] group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+
+        {% if paginator.total_pages > 1 %}
+        <nav class="mt-16 flex flex-wrap justify-center items-center gap-2" aria-label="Pagination">
+          {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | relative_url }}" class="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-white bg-white transition">← Newer</a>
+          {% else %}
+            <span class="px-4 py-2 rounded-lg border border-gray-200 text-gray-300 cursor-not-allowed bg-white">← Newer</span>
+          {% endif %}
+
+          {% for trail in paginator.page_trail %}
+            {% if trail.num == paginator.page %}
+              <span class="px-4 py-2 rounded-lg bg-gray-900 text-white font-semibold">{{ trail.num }}</span>
+            {% else %}
+              <a href="{{ trail.path | relative_url }}" class="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-white bg-white transition">{{ trail.num }}</a>
+            {% endif %}
+          {% endfor %}
+
+          {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}" class="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-white bg-white transition">Older →</a>
+          {% else %}
+            <span class="px-4 py-2 rounded-lg border border-gray-200 text-gray-300 cursor-not-allowed bg-white">Older →</span>
+          {% endif %}
+        </nav>
+        {% endif %}
+      </div>
+
+      <!-- Search results view (populated by JS) -->
+      <div id="resultsView" class="hidden">
+        <div id="resultsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        <div id="noResults" class="hidden text-center py-16 bg-white rounded-2xl border border-gray-200">
+          <svg class="w-12 h-12 mx-auto text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <p class="text-gray-500">No articles match your search.</p>
+        </div>
+      </div>
+
+    {% else %}
+      <div class="text-center py-16 bg-white rounded-2xl border border-gray-200">
+        <p class="text-gray-500">No posts yet. Check back soon.</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+(function() {
+  var categories = {
+    {% for cat in site.data.blog_categories %}
+      {{ cat[0] | jsonify }}: { bg: {{ cat[1].bg | jsonify }}, text: {{ cat[1].text | jsonify }}, icon: {{ cat[1].icon | jsonify }} }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+
+  var searchInput = document.getElementById('blogSearch');
+  var chips = document.querySelectorAll('.category-chip');
+  var status = document.getElementById('searchStatus');
+  var defaultView = document.getElementById('defaultView');
+  var resultsView = document.getElementById('resultsView');
+  var resultsGrid = document.getElementById('resultsGrid');
+  var noResults = document.getElementById('noResults');
+
+  if (!searchInput) return;
+
+  var postsPromise = null;
+  var activeCategory = '';
+
+  function loadPosts() {
+    if (!postsPromise) {
+      postsPromise = fetch('{{ "/blog/search.json" | relative_url }}').then(function(r) { return r.json(); });
+    }
+    return postsPromise;
+  }
+
+  function escapeHtml(s) {
+    var d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  function renderCard(post) {
+    var cat = categories[post.category] || { bg: 'bg-gray-100', text: 'text-gray-700', icon: 'M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10l6 6v10a2 2 0 01-2 2z' };
+    var minutes = Math.floor(post.words / 200) + 1;
+    var catLabel = post.category ? '<span class="text-xs font-bold ' + cat.text + ' uppercase tracking-wide">' + escapeHtml(post.category) + '</span>' : '';
+
+    return '<article class="group bg-white border border-gray-200 rounded-2xl p-6 hover:border-[#00B057] hover:shadow-lg transition-all flex flex-col">'
+      + '<div class="flex items-center justify-between mb-5">'
+      + '<div class="w-10 h-10 rounded-xl ' + cat.bg + ' ' + cat.text + ' flex items-center justify-center">'
+      + '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="' + cat.icon + '" /></svg>'
+      + '</div>' + catLabel + '</div>'
+      + '<h2 class="text-lg font-bold text-gray-900 mb-3 leading-snug"><a href="' + post.url + '" class="group-hover:text-[#00B057] transition">' + escapeHtml(post.title) + '</a></h2>'
+      + '<p class="text-sm text-gray-600 mb-6 flex-1 leading-relaxed">' + escapeHtml(post.description) + '</p>'
+      + '<div class="flex items-center justify-between pt-4 border-t border-gray-100 text-xs text-gray-500">'
+      + '<div class="flex items-center gap-2"><time>' + escapeHtml(post.date) + '</time><span>·</span><span>' + minutes + ' min read</span></div>'
+      + '<svg class="w-4 h-4 text-gray-400 group-hover:text-[#00B057] group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>'
+      + '</div></article>';
+  }
+
+  function applyFilters() {
+    var query = searchInput.value.trim().toLowerCase();
+
+    if (!query && !activeCategory) {
+      defaultView.classList.remove('hidden');
+      resultsView.classList.add('hidden');
+      status.classList.add('hidden');
+      return;
+    }
+
+    loadPosts().then(function(posts) {
+      var filtered = posts.filter(function(p) {
+        if (activeCategory && p.category !== activeCategory) return false;
+        if (query) {
+          var haystack = (p.title + ' ' + p.description + ' ' + p.category).toLowerCase();
+          if (haystack.indexOf(query) === -1) return false;
+        }
+        return true;
+      });
+
+      defaultView.classList.add('hidden');
+      resultsView.classList.remove('hidden');
+
+      if (filtered.length === 0) {
+        resultsGrid.innerHTML = '';
+        noResults.classList.remove('hidden');
+        status.classList.add('hidden');
+        return;
+      }
+
+      noResults.classList.add('hidden');
+      resultsGrid.innerHTML = filtered.map(renderCard).join('');
+
+      var parts = [];
+      if (query) parts.push('"' + escapeHtml(searchInput.value.trim()) + '"');
+      if (activeCategory) parts.push('in ' + activeCategory);
+      status.textContent = filtered.length + ' article' + (filtered.length === 1 ? '' : 's') + ' ' + (parts.length ? 'matching ' + parts.join(' ') : '');
+      status.classList.remove('hidden');
+    });
+  }
+
+  var debounce;
+  searchInput.addEventListener('input', function() {
+    clearTimeout(debounce);
+    debounce = setTimeout(applyFilters, 150);
+  });
+
+  chips.forEach(function(chip) {
+    chip.addEventListener('click', function() {
+      activeCategory = chip.dataset.category;
+
+      chips.forEach(function(c) {
+        if (c === chip) {
+          c.classList.add('active', 'bg-gray-900', 'text-white');
+          c.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+        } else {
+          c.classList.remove('active', 'bg-gray-900', 'text-white');
+          c.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+        }
+      });
+
+      applyFilters();
+    });
+  });
+})();
+</script>

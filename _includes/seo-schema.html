@@ -1,0 +1,80 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#organization",
+      "name": "{{ site.data.seo.organization.legal_name }}",
+      "url": "{{ site.url }}",
+      "logo": "{{ site.url }}/assets/images/logo/logo-2.png",
+      "description": "{{ site.description | strip_newlines }}",
+      "foundingDate": "{{ site.data.seo.organization.founding_year }}",
+      "email": "{{ site.data.seo.organization.email }}",
+      "telephone": "{{ site.data.seo.organization.phone }}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{ site.data.seo.organization.city }}",
+        "addressCountry": "{{ site.data.seo.organization.country }}"
+      },
+      "sameAs": [
+        "{{ site.data.seo.organization.social.facebook_url }}",
+        "{{ site.data.seo.organization.social.instagram_url }}",
+        "{{ site.data.seo.organization.social.tiktok_url }}",
+        "{{ site.data.seo.organization.social.youtube_url }}"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "{{ site.url }}/#software",
+      "name": "Sentibooks",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "{{ site.app_url }}",
+      "description": "{{ site.description | strip_newlines }}",
+      "publisher": { "@id": "{{ site.url }}/#organization" },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Starter",
+          "price": "1500",
+          "priceCurrency": "KES",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Business",
+          "price": "3000",
+          "priceCurrency": "KES",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Advanced",
+          "price": "5000",
+          "priceCurrency": "KES",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}",
+      "name": "{{ site.title }}",
+      "publisher": { "@id": "{{ site.url }}/#organization" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ site.url }}"
+        }
+      ]
+    }
+  ]
+}
+</script>

@@ -1,0 +1,45 @@
+<div class="bg-white rounded-2xl shadow-sm {% if plan.featured %}border-2 border-[#00B057] relative card-hover flex flex-col p-6 transform scale-105 z-10{% else %}border border-gray-200 card-hover flex flex-col p-6{% endif %}">
+  {% if plan.badge %}
+    <span class="absolute -top-3 right-4 bg-accent-gradient text-white text-xs font-bold px-3 py-1 rounded-full shadow">{{ plan.badge }}</span>
+  {% endif %}
+  <h3 class="text-xl font-bold text-gray-900 mb-1">{{ plan.name }}</h3>
+  <p class="text-gray-500 text-sm mb-4">{{ plan.tagline }}</p>
+
+  <div class="mb-4">
+    <div class="monthly-price">
+      <span class="text-3xl font-extrabold {% if plan.featured %}text-[#00B057]{% else %}text-gray-900{% endif %}">{{ plan.price.monthly }}</span>
+      <span class="text-sm text-gray-500">/mo</span>
+    </div>
+    <div class="quarterly-price hidden">
+      <span class="text-3xl font-extrabold {% if plan.featured %}text-[#00B057]{% else %}text-gray-900{% endif %}">{{ plan.price.quarterly }}</span>
+      <span class="text-sm text-gray-500">/qtr</span>
+    </div>
+    <div class="yearly-price hidden">
+      <span class="text-3xl font-extrabold {% if plan.featured %}text-[#00B057]{% else %}text-gray-900{% endif %}">{{ plan.price.yearly }}</span>
+      <span class="text-sm text-gray-500">/yr</span>
+    </div>
+    <p class="text-sm text-[#00B057] font-medium quarterly-note hidden">Equivalent to {{ plan.price.quarterly_monthly_equiv }}/mo</p>
+    <p class="text-sm text-[#00B057] font-medium yearly-note hidden">Equivalent to {{ plan.price.yearly_monthly_equiv }}/mo</p>
+  </div>
+
+  <ul class="space-y-3 text-sm text-gray-600 mb-8 flex-1">
+    {% for feature in plan.features %}
+      <li class="flex items-start gap-2">
+        <span class="text-[#00B057] font-bold">✓</span>
+        <span class="flex items-center gap-1">
+          {{ feature.text }}
+          {% if feature.tooltip %}
+            <span class="tooltip" tabindex="0">
+              <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <span class="tooltip-text">{{ feature.tooltip }}</span>
+            </span>
+          {% endif %}
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <a href="{{ site.app_url }}" class="block w-full text-center py-3 rounded-lg font-semibold transition {% if plan.featured %}bg-green-gradient text-white hover:shadow-lg{% elsif plan.outline_button %}bg-white border-2 border-[#0B2A6A] text-[#0B2A6A] hover:bg-[#0B2A6A] hover:text-white{% else %}bg-blue-gradient text-white hover:shadow-lg{% endif %}">
+    Start trial
+  </a>
+</div>

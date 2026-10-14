@@ -1,0 +1,73 @@
+title: Sentibooks
+tagline: Bookkeeping built for Kenyan businesses
+description: >-
+  Sentibooks is the modern bookkeeping platform for Kenyan businesses.
+  Invoicing, quotations, expenses, VAT, PAYE, and KRA compliance made effortless.
+url: "https://sentibooks.com"
+baseurl: ""
+app_url: "https://app.sentibooks.com"
+youtube_url: "https://youtube.com/@Sentibooks"
+
+author:
+  name: Sentibooks
+  email: hello@sentibooks.com
+
+social:
+  name: Sentibooks
+  links:
+    - https://www.facebook.com/sentibooks
+    - https://www.instagram.com/sentibooks
+    - https://www.tiktok.com/@sentibooks
+    - https://youtube.com/@Sentibooks
+
+markdown: kramdown
+permalink: pretty
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      permalink: /:title/
+      layout: post
+      author: Sentibooks
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate-v2
+
+analytics:
+  plausible_domain: "sentibooks.com"
+
+twitter:
+  username: sentibooks
+  card: summary_large_image
+
+logo: /assets/images/logo/logo-2.png
+
+webmaster_verifications:
+  google:
+  bing:
+
+pagination:
+  enabled: true
+  per_page: 9
+  permalink: '/blog/page/:num/'
+  sort_reverse: true
+
+feed:
+  path: feed.xml
+  posts_limit: 20
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
+  - .jekyll-cache

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  {% include head.html %}
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+  {% include nav.html %}
+
+  <main>
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  {% include app-picker.html %}
+
+  <div id="imageModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4" style="display: none;">
+    <span class="absolute top-4 right-4 text-white text-4xl cursor-pointer hover:text-gray-300 transition z-10" id="closeModal">&times;</span>
+    <img id="modalImage" src="" alt="Full view" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl object-contain">
+  </div>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/app-picker.js' | relative_url }}"></script>
+</body>
+</html>

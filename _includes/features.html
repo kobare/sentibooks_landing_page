@@ -1,0 +1,13 @@
+<section id="features" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">{{ site.data.features.heading }}</h2>
+      <p class="mt-4 text-lg text-gray-600">{{ site.data.features.subheading }}</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for feature in site.data.features.items %}
+        {% include feature-card.html feature=feature %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,63 @@
+heading: Simple, transparent pricing
+subheading: Plans designed for every stage of your business. No hidden fees.
+
+plans:
+  - name: Starter
+    tagline: For sole traders and freelancers
+    featured: false
+    outline_button: false
+    price:
+      monthly: "KES 1,500"
+      quarterly: "KES 4,280"
+      yearly: "KES 16,200"
+      quarterly_monthly_equiv: "1,427"
+      yearly_monthly_equiv: "1,350"
+    features:
+      - text: Unlimited invoicing
+      - text: Customers and price lists
+      - text: Chart of accounts
+      - text: Basic reports
+      - text: 2 users
+      - text: 1 branch
+
+  - name: Business
+    tagline: For growing SMEs
+    featured: true
+    badge: MOST POPULAR
+    outline_button: false
+    price:
+      monthly: "KES 3,000"
+      quarterly: "KES 8,550"
+      yearly: "KES 32,400"
+      quarterly_monthly_equiv: "2,850"
+      yearly_monthly_equiv: "2,700"
+    features:
+      - text: Everything in Starter
+      - text: Quotations and estimates
+      - text: Work orders and tasks
+      - text: Inventory and stock
+      - text: Bills and purchase orders
+      - text: Bank reconciliation
+      - text: Advanced reports
+        tooltip: "P&L, balance sheet, VAT, cash flow, aged receivables and payables"
+      - text: Up to 15 users, 3 branches
+
+  - name: Advanced
+    tagline: For established businesses
+    featured: false
+    outline_button: true
+    price:
+      monthly: "KES 5,000"
+      quarterly: "KES 14,250"
+      yearly: "KES 54,000"
+      quarterly_monthly_equiv: "4,750"
+      yearly_monthly_equiv: "4,500"
+    features:
+      - text: Everything in Business
+      - text: "<strong>Payroll included</strong>"
+      - text: Statutory reports
+        tooltip: "P10, NSSF, SHIF, Housing Levy"
+      - text: Employee loans and advances
+      - text: Leave management and timesheets
+      - text: Up to 30 users, 5 branches
+      - text: Dedicated support

@@ -1,0 +1,19 @@
+<section id="compliance" class="bg-dark-gradient py-20 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 60px 60px;"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
+    <span class="bg-white/10 backdrop-blur-md text-sm font-medium px-4 py-2 rounded-full inline-block mb-6">🇰🇪 Tax Ready</span>
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Tax-ready, audit-friendly</h2>
+    <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-12">
+      Sentibooks helps you maintain tax-ready records with a pre-built Kenyan chart of accounts, automatic VAT calculations on parts and labour, and tax registration management - so you're always ready for filing.
+    </p>
+    <div class="grid md:grid-cols-3 gap-8 text-left max-w-4xl mx-auto">
+      {% for item in site.data.features.tax_ready %}
+        <div class="glass rounded-2xl p-6 card-hover">
+          <div class="text-4xl mb-4">{{ item.emoji }}</div>
+          <h3 class="font-semibold text-xl mb-2">{{ item.title }}</h3>
+          <p class="text-sm text-gray-300">{{ item.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

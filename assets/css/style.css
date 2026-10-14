@@ -1,0 +1,61 @@
+body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+.bg-dark-gradient { background: linear-gradient(135deg, #0A0A0A 0%, #1F1F1F 100%); }
+.bg-accent-gradient { background: linear-gradient(135deg, #0B2A6A 0%, #0C4697 100%); }
+.bg-green-gradient { background: linear-gradient(135deg, #00B057 0%, #009a4c 100%); }
+.card-hover { transition: all 0.3s ease; }
+.card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1); }
+.glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.15); }
+.hero-animation { background-size: 200% 200%; animation: gradientMove 6s ease infinite; }
+@keyframes gradientMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+.fade-in { animation: fadeIn 1s ease forwards; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+.phone-frame { background: #0A0A0A; border-radius: 36px; padding: 12px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); max-width: 280px; margin: 0 auto; }
+.phone-screen { border-radius: 28px; overflow: hidden; background: #fff; position: relative; }
+.phone-notch { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 120px; height: 24px; background: #0A0A0A; border-radius: 0 0 14px 14px; z-index: 10; }
+
+.monitor-frame { background: #1a1a1a; border-radius: 12px 12px 4px 4px; padding: 10px; box-shadow: 0 20px 40px -12px rgba(0,0,0,0.3); max-width: 750px; width: 100%; margin: 0 auto; }
+.monitor-screen { border-radius: 4px; overflow: hidden; background: #fff; }
+.monitor-stand { background: #1a1a1a; height: 6px; width: 50%; margin: 6px auto 0; border-radius: 0 0 4px 4px; }
+.monitor-base { background: #1a1a1a; height: 4px; width: 70%; margin: 4px auto 0; border-radius: 2px; }
+
+.slider-container { position: relative; overflow: hidden; width: 100%; max-width: 780px; margin: 0 auto; }
+.slider-track { display: flex; transition: transform 0.5s ease-in-out; }
+.slider-slide { min-width: 100%; box-sizing: border-box; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.slider-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: background 0.3s; }
+.dot.active { background: #0B2A6A; }
+
+.nav-glass { background: rgba(255,255,255,0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06); }
+
+.billing-tab { display: inline-block; padding: 0.5rem 1rem; border-radius: 0.5rem; font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: all 0.2s; }
+.billing-tab.active { background: #fff; color: #0A0A0A; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.billing-tab:not(.active) { color: #6b7280; }
+.billing-tab:not(.active):hover { color: #374151; }
+
+.tooltip { position: relative; display: inline-flex; align-items: center; cursor: help; }
+.tooltip .tooltip-text {
+  visibility: hidden; opacity: 0; pointer-events: none;
+  position: absolute; bottom: 100%; left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  background: #0A0A0A; color: #fff;
+  padding: 8px 12px; border-radius: 8px;
+  font-size: 12px; font-weight: 400; line-height: 1.4;
+  width: 200px; text-align: center;
+  box-shadow: 0 10px 20px -5px rgba(0,0,0,0.35);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 30; white-space: normal;
+}
+.tooltip .tooltip-text::after {
+  content: ''; position: absolute; top: 100%; left: 50%;
+  margin-left: -5px; border-width: 5px; border-style: solid;
+  border-color: #0A0A0A transparent transparent transparent;
+}
+.tooltip:hover .tooltip-text, .tooltip:focus .tooltip-text {
+  visibility: visible; opacity: 1;
+  transform: translateX(-50%) translateY(-8px);
+}
+
+.bg-accent-gradient { background: linear-gradient(135deg, #0B2A6A 0%, #0C4697 100%); }
+.bg-blue-gradient { background: linear-gradient(135deg, #0B2A6A 0%, #0C4697 100%); }
+.bg-green-gradient { background: linear-gradient(135deg, #00B057 0%, #009a4c 100%); }
