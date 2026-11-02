@@ -99,3 +99,9 @@ A business with clear categories, clear limits, and clear documentation has pett
 A business without those three has a petty cash box that is a workaround for the purchasing process, and its losses are invisible until the books are reconciled at year end, at which point it is too late to fix.
 
 The difference is roughly one day of setup. Write down the categories, write down the limits, and get the custodian to acknowledge both in writing. That single act changes the way petty cash is used from that week forward.
+
+## Related reading
+
+- [Petty Cash Management for Small Businesses](/petty-cash-management-for-small-businesses/)
+- [Petty Cash Automation: When to Stop Using a Voucher Book](/petty-cash-automation-when-to-stop-using-a-voucher-book/)
+- [Internal Controls for Petty Cash in a Kenyan Business](/internal-controls-for-petty-cash-in-a-kenyan-business/)

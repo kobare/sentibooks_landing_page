@@ -78,6 +78,12 @@ For a Kenyan SME, the evaluation criteria are not "does it have module X." They 
 
 **Is it priced for an SME?** A full HRMS priced at KES 50,000 a month for a 15-employee business is not the right product, no matter how good it is. The cost needs to match the value.
 
+## Related reading
+
+- [HR Software Kenya: A Practical Guide for SMEs](/hr-software-kenya-a-practical-guide-for-smes/)
+- [Payroll vs HRMS: What's the Difference for Kenyan Businesses](/payroll-vs-hrms-whats-the-difference-for-kenyan-businesses/)
+- [Leave Management Software for Kenyan SMEs](/leave-management-software-for-kenyan-smes/)
+
 ## What Sentibooks actually does
 
 Sentibooks is not a full HRMS. It does not do recruitment, performance reviews, training, or engagement surveys.

@@ -110,3 +110,9 @@ Start with three:
 Add the separation of roles (control 2) in month two. Add per-transaction limits (control 4) and category limits (control 5) in month three. Add surprise counts (control 7) in month four.
 
 Six weeks into running the first three, the business will already see the difference. The leakage is lower, the reconciliation is cleaner, and the month-end close is faster. That is the argument for adding the remaining four.
+
+## Related reading
+
+- [Petty Cash Management for Small Businesses](/petty-cash-management-for-small-businesses/)
+- [Petty Cash Automation: When to Stop Using a Voucher Book](/petty-cash-automation-when-to-stop-using-a-voucher-book/)
+- [Petty Cash Expenses: What Counts and What Doesn't](/petty-cash-expenses-what-counts-and-what-doesnt/)

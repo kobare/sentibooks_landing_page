@@ -82,3 +82,9 @@ Three reasons.
 A practice running this workflow can serve 20 to 25 clients with three to four staff. A practice without it struggles with 10 to 12 clients and three staff, because the workflow exists only in people's heads and breaks the moment any of them is out.
 
 The difference is not more staff, and it is not more software. It is documenting the workflow and enforcing it. That is the difference between a practice that scales and one that plateaus.
+
+## Related reading
+
+- [Accounting Software for Accountants in Kenya](/accounting-software-for-accountants-in-kenya/)
+- [How to Price Bookkeeping Services in Kenya](/how-to-price-bookkeeping-services-in-kenya/)
+- [Managing KRA Deadlines Across Multiple Clients](/managing-kra-deadlines-across-multiple-clients/)

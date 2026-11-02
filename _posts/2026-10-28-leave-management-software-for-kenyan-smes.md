@@ -81,6 +81,12 @@ Three benefits, in order of importance.
 
 The ROI on leave management software is almost always positive for businesses with more than 10 employees.
 
+## Related reading
+
+- [HRMS Software in Kenya: What SMEs Actually Need](/hrms-software-in-kenya-what-smes-actually-need/)
+- [HR Software Kenya: A Practical Guide for SMEs](/hr-software-kenya-a-practical-guide-for-smes/)
+- [Payroll vs HRMS: What's the Difference for Kenyan Businesses](/payroll-vs-hrms-whats-the-difference-for-kenyan-businesses/)
+
 ## What Sentibooks does
 
 Sentibooks includes leave management as part of the payroll module. Every employee has an accrual balance that updates monthly. Employees can request leave from their phone. Managers approve. The balance updates automatically.

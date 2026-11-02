@@ -95,3 +95,9 @@ They price for the client's current size, not the client's growth. A business th
 Set the retainer with headroom. Include the transaction bands from the start. When the client crosses a threshold, the fee moves automatically because the pricing structure already said it would.
 
 That is the difference between a practice that grows revenue alongside its clients and one that runs flat while doing 3x the work.
+
+## Related reading
+
+- [Accounting Software for Accountants in Kenya](/accounting-software-for-accountants-in-kenya/)
+- [Managing KRA Deadlines Across Multiple Clients](/managing-kra-deadlines-across-multiple-clients/)
+- [How to Onboard a New Client to Your Bookkeeping Practice](/onboarding-a-new-client-to-your-bookkeeping-practice/)

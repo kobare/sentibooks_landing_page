@@ -95,6 +95,12 @@ The right question is not "payroll or HRMS." It is "which functions does the bus
 
 For most Kenyan SMEs, the answer is: payroll done well, plus employee records and leave tracked somewhere. If that "somewhere" can be the same system as payroll, that is the right product. If the "somewhere" needs to be a full HRMS to be useful, that is a different product.
 
+## Related reading
+
+- [HRMS Software in Kenya: What SMEs Actually Need](/hrms-software-in-kenya-what-smes-actually-need/)
+- [HR Software Kenya: A Practical Guide for SMEs](/hr-software-kenya-a-practical-guide-for-smes/)
+- [Leave Management Software for Kenyan SMEs](/leave-management-software-for-kenyan-smes/)
+
 ## How Sentibooks fits
 
 Sentibooks is not a full HRMS and is not trying to be. It handles the HR functions that a Kenyan SME actually uses: employee records, timesheets, leave management, and payroll with full statutory calculation.

@@ -85,6 +85,40 @@ Every petty cash expense is a business expense and should be recorded. For VAT-r
 
 Without receipts, none of this is provable. Receipts or vouchers, every time.
 
+## Related reading
+
+- [Petty Cash Automation: When to Stop Using a Voucher Book](/petty-cash-automation-when-to-stop-using-a-voucher-book/)
+- [Internal Controls for Petty Cash in a Kenyan Business](/internal-controls-for-petty-cash-in-a-kenyan-business/)
+- [Petty Cash Expenses: What Counts and What Doesn't](/petty-cash-expenses-what-counts-and-what-doesnt/)
+
+## When manual petty cash stops working
+
+The voucher book works until it doesn't. Three thresholds mark where manual petty cash starts to break.
+
+Around 15 to 20 expenses a week, the process slips. Receipts go missing, vouchers get signed by one person instead of two, and the month-end reconciliation comes up short by amounts that are individually small and collectively concerning.
+
+At 40 to 60 expenses a week, weekly reconciliation takes a full hour, the custodian is spending a third of their time on petty cash, and the monthly close starts to suffer.
+
+Above 100 expenses a week, the amounts are no longer petty and the process is no longer a control. Most of those expenses should be on purchase orders, not paid from a cash box.
+
+We covered the thresholds and what to do at each one in detail in [Petty Cash Automation: When to Stop Using a Voucher Book](/petty-cash-automation-when-to-stop-using-a-voucher-book/). The short version: at each threshold, there is a lighter, faster way to run petty cash that does not require a full software migration.
+
+## Internal controls for petty cash
+
+Petty cash is the smallest account in the business and the easiest to abuse. Not because the amounts are large, but because the controls around a KES 500 expense are rarely as serious as the controls around a KES 50,000 invoice.
+
+The core controls that stop leakage:
+
+- **Fixed float.** The box holds an exact amount, always. Replenishment restores the exact amount. No drift.
+- **Voucher for every payment.** No cash out without a voucher, no voucher without a receipt attached.
+- **Per-transaction limit.** Usually KES 2,000 to KES 5,000. Anything above goes through the regular purchasing process.
+- **Weekly reconciliation.** Cash in hand plus vouchers should equal the float every Friday. Monthly is too late.
+- **Surprise counts.** Once a month, unannounced. This is the only control that catches falsified records.
+
+We covered the full framework, including the seven controls that matter and how to introduce them over four months, in [Internal Controls for Petty Cash in a Kenyan Business](/internal-controls-for-petty-cash-in-a-kenyan-business/). If the business currently runs on cash with no formal controls, that post is the starting point.
+
+For the specific rules about what does and does not belong in petty cash, see [Petty Cash Expenses: What Counts and What Doesn't](/petty-cash-expenses-what-counts-and-what-doesnt/).
+
 ## How Sentibooks helps
 
 Sentibooks tracks petty cash as a dedicated account. You record each voucher, attach the receipt, and the monthly reconciliation flows directly into your books. No separate spreadsheet.

@@ -109,6 +109,12 @@ The business should be able to answer these questions within five minutes, for a
 
 If answering those questions takes an hour, the records are not in good shape. If it takes five minutes, they are.
 
+## Related reading
+
+- [HRMS Software in Kenya: What SMEs Actually Need](/hrms-software-in-kenya-what-smes-actually-need/)
+- [HR Software Kenya: A Practical Guide for SMEs](/hr-software-kenya-a-practical-guide-for-smes/)
+- [Payroll vs HRMS: What's the Difference for Kenyan Businesses](/payroll-vs-hrms-whats-the-difference-for-kenyan-businesses/)
+
 ## How Sentibooks handles employee records
 
 Sentibooks keeps employee records against the payroll module. Every employee has a record with their personal details, statutory identifiers, contract dates, salary history, leave balances, payslips, and statutory remittance history.

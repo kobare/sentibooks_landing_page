@@ -89,3 +89,9 @@ A practice doing the above can onboard a new client in 6 to 8 hours of staff tim
 A practice without the checklist, the standard chart, the data collection process, and the fixed first-month rhythm takes 15 to 25 hours. Two to three days of staff time.
 
 At fifteen clients a year, that difference adds up to thirty days of billable capacity, or roughly one full month of a junior accountant. That is the cost of not having a process, and it is invisible in most practices because the time disappears into "setting up a new client" rather than into a line item.
+
+## Related reading
+
+- [Accounting Software for Accountants in Kenya](/accounting-software-for-accountants-in-kenya/)
+- [How to Price Bookkeeping Services in Kenya](/how-to-price-bookkeeping-services-in-kenya/)
+- [Managing KRA Deadlines Across Multiple Clients](/managing-kra-deadlines-across-multiple-clients/)

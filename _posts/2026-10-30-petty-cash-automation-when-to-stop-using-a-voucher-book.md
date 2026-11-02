@@ -96,3 +96,9 @@ If the business is at 15 to 30 expenses a week and the voucher book still techni
 If the business is at 40 to 100 expenses a week, move to a proper digital petty cash ledger. The transition takes about a week of training and pays for itself within three months.
 
 Above 100, the right answer is usually to restructure the expenses rather than manage them better. That conversation is worth having before investing in any new system.
+
+## Related reading
+
+- [Petty Cash Management for Small Businesses](/petty-cash-management-for-small-businesses/)
+- [Internal Controls for Petty Cash in a Kenyan Business](/internal-controls-for-petty-cash-in-a-kenyan-business/)
+- [Petty Cash Expenses: What Counts and What Doesn't](/petty-cash-expenses-what-counts-and-what-doesnt/)

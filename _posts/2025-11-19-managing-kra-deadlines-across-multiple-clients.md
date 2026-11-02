@@ -99,3 +99,9 @@ Each of those is a case for tracking the client's numbers against the thresholds
 A practice running this discipline will not eliminate all risk. It will eliminate the deadline slips that come from the practice's own process. Client-side late data will still happen. Threshold crossings will still occasionally surprise. But the 80 percent of missed deadlines that come from internal workflow problems go away.
 
 That is the difference between a practice that grows from five to fifteen clients smoothly and one that starts missing filings at eight.
+
+## Related reading
+
+- [Accounting Software for Accountants in Kenya](/accounting-software-for-accountants-in-kenya/)
+- [How to Price Bookkeeping Services in Kenya](/how-to-price-bookkeeping-services-in-kenya/)
+- [How to Onboard a New Client to Your Bookkeeping Practice](/onboarding-a-new-client-to-your-bookkeeping-practice/)

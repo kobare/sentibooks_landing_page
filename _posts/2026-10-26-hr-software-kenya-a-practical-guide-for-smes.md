@@ -81,6 +81,12 @@ The financial case for a Kenyan SME:
 
 The cumulative value for a 20-employee Kenyan SME is KES 250,000 to KES 400,000 a year, against a software cost of KES 36,000 to KES 96,000 a year. The ROI is typically under three months.
 
+## Related reading
+
+- [HRMS Software in Kenya: What SMEs Actually Need](/hrms-software-in-kenya-what-smes-actually-need/)
+- [Payroll vs HRMS: What's the Difference for Kenyan Businesses](/payroll-vs-hrms-whats-the-difference-for-kenyan-businesses/)
+- [Leave Management Software for Kenyan SMEs](/leave-management-software-for-kenyan-smes/)
+
 ## What Sentibooks does
 
 Sentibooks has the core HR module a Kenyan SME actually uses: employee records, timesheets, leave management, and payroll with full statutory calculation for PAYE, SHIF, NSSF, and Housing Levy.

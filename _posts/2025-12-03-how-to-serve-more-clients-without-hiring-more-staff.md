@@ -93,3 +93,9 @@ At 25 clients, hiring starts to make sense. Before that, the practice is usually
 Pick the first lever. Data collection discipline. Write the client contract addendum, the data package checklist, and the reminder schedule. Send the addendum to your top five clients. Enforce it starting next month.
 
 Nothing else in this article works until data collection is disciplined. Every other improvement assumes data arrives in a predictable format on a predictable date. That has to be true first.
+
+## Related reading
+
+- [Accounting Software for Accountants in Kenya](/accounting-software-for-accountants-in-kenya/)
+- [How to Price Bookkeeping Services in Kenya](/how-to-price-bookkeeping-services-in-kenya/)
+- [Managing KRA Deadlines Across Multiple Clients](/managing-kra-deadlines-across-multiple-clients/)

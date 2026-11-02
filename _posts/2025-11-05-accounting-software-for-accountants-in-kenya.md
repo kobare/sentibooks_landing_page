@@ -68,6 +68,12 @@ Six questions, in a written demo where the provider shows the answer on screen r
 
 If any of the six takes more than two minutes to demonstrate, the answer is no.
 
+## Related reading
+
+- [How to Price Bookkeeping Services in Kenya](/how-to-price-bookkeeping-services-in-kenya/)
+- [Managing KRA Deadlines Across Multiple Clients](/managing-kra-deadlines-across-multiple-clients/)
+- [How to Onboard a New Client to Your Bookkeeping Practice](/onboarding-a-new-client-to-your-bookkeeping-practice/)
+
 ## What Sentibooks actually does
 
 Sentibooks is a multi-client system from the ground up. One login, separate workspaces per client, each with its own chart of accounts, users, and permissions. Activity is logged per workspace, so when a client asks who changed what, the answer is a record, not a memory.
